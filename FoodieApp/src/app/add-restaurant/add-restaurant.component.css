@@ -1,0 +1,9 @@
+.navbar
+{
+    background-image: url(https://thumbs.dreamstime.com/b/italian-food-background-black-stone-table-top-view-italian-food-background-black-stone-table-pasta-olive-oil-spices-herbs-112200186.jpg);
+    background-size: 100% 100%;
+    
+}
+.space{
+    flex:30;
+}

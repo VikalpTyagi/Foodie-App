@@ -1,0 +1,110 @@
+<nav class="navbar shadow" style="background-color: blueviolet;">
+    <div class="container">
+        <label class="text-white fs-5" routerLink="/Add-Restaurant"><Strong class="h3 fw-bold">DELICIOUS</Strong><br>for business</label>
+    </div>
+</nav>
+<mat-card>
+    <mat-card-content>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <h2>Sign Up for restaurant</h2>
+            <div class="mb-2">
+                <input type="file" (change)="selectFile($event)" [(ngModel)]="restaurant.restaurantImg"
+                    name="restaurantImg" required>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="Restaurant Id" [(ngModel)]="restaurant.restaurantId"
+                            name="restaurantId" required>
+                        <mat-error>
+                            Please provide restaurantId
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput type="password" placeholder="Password" [(ngModel)]="restaurant.password"
+                            name="password" required>
+                        <mat-error>
+                            Please provide a valid password
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="RestaurantOwnerName" [(ngModel)]="restaurant.restaurantOwnerName"
+                            name="restaurantOwnerName" required>
+                        <mat-error>
+                            Please provide a valid restaurant Owner Name
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="RestaurantName" [(ngModel)]="restaurant.restaurantName"
+                            name="restaurantName" required>
+                        <mat-error>
+                            Please provide a valid restaurant name
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="Location" [(ngModel)]="restaurant.location" name="location"
+                            required>
+                        <mat-error>
+                            Please provide a valid location
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="Phone No." [(ngModel)]="restaurant.phNo" name="phNo" required>
+                        <mat-error>
+                            Please provide a valid Phone No.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="Restaurant rating" [(ngModel)]="restaurant.restaurantRating"
+                            name="restaurantRating" required>
+                        <mat-error>
+                            Please provide a valid Restaurant rating
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <mat-form-field>
+                        <input matInput placeholder="Description" [(ngModel)]="restaurant.description"
+                            name="description" required>
+                        <mat-error>
+                            Please provide a valid description
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field>
+                        <input matInput placeholder="Address" [(ngModel)]="restaurant.address" name="address"
+                            required>
+                        <mat-error>
+                            Please provide a valid address
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" data-bs-dismiss="modal">Register</button>
+        </form>
+    </mat-card-content>
+</mat-card>

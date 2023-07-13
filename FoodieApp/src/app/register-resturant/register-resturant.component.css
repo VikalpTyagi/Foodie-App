@@ -1,0 +1,17 @@
+.form
+{
+    background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fflat-lay-composition-vegetables-with-copyspace_23-2148190202.jpg%3Fw%3D2000");
+    background-repeat: no-repeat;
+     height:83%;
+    background-color: #FFFFFF;
+}
+
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }

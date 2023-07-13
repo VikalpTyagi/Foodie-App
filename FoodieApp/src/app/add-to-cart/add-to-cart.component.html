@@ -1,0 +1,249 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <label class="fs-5" routerLink="/food-items"><Strong class="h3 fw-bold me-5">DELICIOUS</Strong><br>
+            <p style="font-size: small; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Feeling
+                hungry? Order Now!</p>
+        </label>
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search for dishes" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form> -->
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item mt-2 me-4">
+                    <button mat-raised-button color="warn" data-bs-toggle="modal" data-bs-target="#exampleModal3"
+                        *ngIf="loggedIn()">Favourites</button>
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <app-add-favourite></app-add-favourite>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+                <li class="nav-item me-4 mt-2">
+                    <button mat-raised-button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        *ngIf="!loggedIn()">Log-In</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <app-login-page></app-login-page>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-raised-button color="primary" class="dropdown btn btn-primary" *ngIf="loggedIn()">
+                        <span class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{user.userName}}
+                        </span>
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" *ngIf="loggedIn()" (click)="logOut()" routerLink="">LogOut</a>
+                            </li>
+
+                        </ul>
+                    </button>
+                    <!-- <button mat-raised-button color="primary" *ngIf="loggedIn()" (click)="logOut()"
+                        routerLink="">LogOut</button> -->
+                </li>
+                <li class="nav-item mt-2">
+                    <button mat-raised-button color="primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                        *ngIf="!loggedIn()">Sign-Up</button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <app-registration-page></app-registration-page>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<section class="mt-2 mb-2" style="background-color: #f0cece;">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h5 class="mb-3"><a class="text-body" routerLink="/food-items"><i
+                                            class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
+                                <hr>
+
+                                <div class="card mb-3" *ngFor="let cuisine of cuisines">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <div>
+                                                    <img src="{{cuisine.foodImg}}" class="img-fluid rounded-3"
+                                                        alt="Shopping item" style="width: 65px;">
+                                                </div>
+                                                <div class="ms-3">
+                                                    <h2>{{cuisine.foodName}}</h2>
+                                                    <p class="small mb-0 fw-medium">{{cuisine.foodDescription}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center" style="margin-right: 25%;">
+                                                <div style="width: 80px;">
+                                                    <h5 class="mb-0 fw-bolder">₹ {{cuisine.foodPrice}}</h5>
+                                                </div>
+                                                            
+                                            
+                                            <div class="d-flex" style="max-width:20px">
+                                                
+                                                <button class="px-3 me-2" mat-mini-fab color="white" (click)="ondelete(cuisine.foodName)">
+                                                  <i class="fas fa-minus"></i>
+                                                </button>
+                              
+                                                <div class="mt-2 ms-1 me-1">
+                                                 <p>{{cuisine.quantity}}</p>
+                                                  
+                                                </div>
+                              
+                                                <button class="px-3 ms-2" mat-mini-fab (click)="onadd(cuisine.foodName)">
+                                                  <i class="fas fa-plus"></i>
+                                                </button>
+                                              </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-lg-5">
+
+                                <div class="card bg-primary text-white rounded-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <h3 class="mb-0">Fill details to order now</h3>
+                                            <!-- <img src="{{user.userImg}}"
+                          class="img-fluid rounded-3" style="width: 45px;" alt="Avatar"> -->
+                                        </div>
+
+                                        <form class="mt-4" [formGroup]="cartForm" (ngSubmit)="onSubmit()">
+                                            <div class="form-outline form-white mb-4">
+                                                <input type="text" id="name" class="form-control form-control-lg"
+                                                    formControlName="name" placeholder="Name" required/>
+                                                <label class="form-label" for="name">Name</label>
+                                                <div *ngIf="cartForm.controls['name'].touched">
+                                                    <div *ngIf="cartForm.controls['name'].hasError('required')">
+                                                      <p style="color: red;">Name is <strong>required</strong></p>
+                                                    </div>
+                                                    </div>
+                                            </div>
+
+                                            <div class="form-outline form-white mb-4">
+                                                <input type="text" id="address" class="form-control form-control-lg"
+                                                    formControlName="address" placeholder="Address" minlength="19"
+                                                    maxlength="19" required />
+                                                <label class="form-label" for="address">Address</label>
+                                                <div *ngIf="cartForm.controls['address'].touched">
+                                                    <div *ngIf="cartForm.controls['address'].hasError('required')">
+                                                      <p style="color: red;">Address is <strong>required</strong></p>
+                                                    </div>
+                                                    </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-outline form-white">
+                                                        <input type="text" id="pinCode"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="pinCode" placeholder="PIN Code" size="7"
+                                                            minlength="7" maxlength="7" required />
+                                                        <label class="form-label" for="pinCode">PIN Code</label>
+                                                        <div *ngIf="cartForm.controls['pinCode'].touched">
+                                                            <div *ngIf="cartForm.controls['pinCode'].hasError('required')">
+                                                              <p style="color: red;">PinCode is <strong>required</strong></p>
+                                                            </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-outline form-white">
+                                                        <input id="phnNumber" class="form-control form-control-lg"
+                                                            formControlName="phnNumber" placeholder="Mobile Number"
+                                                            minlength="10" maxlength="10" required />
+                                                        <label class="form-label" for="phnNumber">Mobile Number</label>
+                                                        <div *ngIf="cartForm.controls['phnNumber'].touched">
+                                                            <div *ngIf="cartForm.controls['phnNumber'].hasError('required')">
+                                                              <p style="color: red;">Mobile Number is <strong>required</strong></p>
+                                                            </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button mat-raised-button class="ms-2" color="accent" type="submit"
+                                                [disabled]="cartForm.valid" >Click to Order</button>
+                                        </form>
+                                        <hr class="my-4">
+
+                                        <!-- <div class="d-flex justify-content-between">
+                                            <p class="mb-2">Subtotal</p>
+                                            <p class="mb-2">₹ {{totalPrice}}</p>
+                                        </div> -->
+
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-2">Shipping</p>
+                                            <p class="mb-2">₹ 50</p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <p class="mb-2">Total(Incl. taxes)</p>
+                                            <p class="mb-2">₹ {{billPrice}}</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

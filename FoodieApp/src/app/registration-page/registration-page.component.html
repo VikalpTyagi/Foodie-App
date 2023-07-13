@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-content>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <h2>Sign Up</h2>
+            <div class="mb-2">
+                <input type="file" (change)="selectFile($event)"  [(ngModel)]="user.userImg" name="userImg">
+            </div>
+            <mat-form-field>
+                <input matInput placeholder="UserName" [(ngModel)]="user.userName" name="userName" required>
+                <mat-error>
+                    Please provide userName
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Email" [(ngModel)]="user.email" name="email" required>
+                <mat-error>
+                    Please provide a valid email address
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password"
+                    required>
+                <mat-error>
+                    Please provide a valid password
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" data-bs-dismiss="modal">Register</button>
+            
+        </form>
+    </mat-card-content>
+</mat-card>

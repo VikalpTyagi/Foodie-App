@@ -1,0 +1,32 @@
+<nav class="navbar">
+    <label class="fs-5" routerLink="/food-items"><Strong class="h3 fw-bold me-5">DELICIOUS</Strong><br>
+        <p style="font-size: small; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Your
+            favourites are waiting for you!! Order Now!</p>
+    </label>
+
+</nav>
+
+<div>
+    <div>
+        <div class="row">
+            <div class="col-12 mt-3 mb-4">
+                <div routerLink="/cuisines-list/{{restaurants.restaurantId}}" data-bs-dismiss="modal" class="card mt-2 shadow-lg" *ngFor="let restaurants of restaurant; let i = index" style="width:100%;">
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper">
+                            <img class="" src="{{restaurants.restaurantImg}}"  width="250px" height="250px">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fs-1 fw-normal font-monospace">{{restaurants.restaurantName}}</h4>
+                            <p class="card-text fs-6 fw-normal">{{restaurants.description}}.</p>
+                            <p class="card-text fs-6 fw-normal">{{restaurants.address}}</p>
+                            <p class="">{{restaurants.restaurantRating}}
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <button mat-raised-button color="warn" (click)="ondelete(restaurants.restaurantId)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

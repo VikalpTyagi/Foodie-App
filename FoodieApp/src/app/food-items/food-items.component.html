@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<!-- <div class="container mt-2">
+  <div class="row height d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="search">
+        <input type="text" matInput placeholder="Search restaurant" [(ngModel)]="restaurantName">
+        <i class="fa fa-search" (click)="clickOn()"></i>
+        <button mat-raised-button style="color: blueviolet;"  >Search</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="example-form mt-3">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input type="text" matInput [(ngModel)]="restaurantName">
+    <mat-icon matSuffix *ngIf="restaurantName" (click)="clickOn()">search</mat-icon>
+  </mat-form-field>
+</div>
+
+<div class="container">
+  <div class="card mt-5 mb-5 me-5" style="width:17rem; height: 25rem;" *ngFor="let restaurants of restaurant"
+    routerLink="/cuisines-list/{{restaurants.restaurantId}}">
+    <img mat-ripple [matRippleCentered]="true" src="{{restaurants.restaurantImg}}" alt="">
+    <div class="card-title row">
+      <h1 class="mt-1 ps-3 col-8"> <strong>{{restaurants.restaurantName}}</strong></h1>
+      <b class="mt-2 col-4">{{restaurants.restaurantRating}}
+        <i class="fa-solid fa-star"></i></b>
+    </div>
+    <p class="ms-2">{{restaurants.description}}</p>
+  </div>
+</div>

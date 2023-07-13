@@ -1,0 +1,59 @@
+version: "3.9"
+services:
+  mysqlservice:
+    image: mysql:5.7
+    ports:
+      - "3307:3307"
+    container_name: mysql-container
+    networks:
+      - springcloud-movie-net
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: user
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  mongodbservice:
+    image: mongo:latest
+    container_name: mongo-container
+    networks:
+      - springcloud-movie-net
+    ports:
+      - "27017:27017"
+
+  userauthenticationservice:
+    container_name: user-authentication-service
+    build: UserAuthenticationService/
+    networks:
+      - springcloud-movie-net
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mysqlservice
+      - apigateway
+    restart: always
+
+  usermovieservice:
+    container_name: user-movie-service
+    build: UserMovieService/
+    networks:
+      - springcloud-movie-net
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodbservice
+      - apigateway
+    restart: always
+
+  apigateway:
+     container_name: spring-cloud-api-gateway
+     build: SpringCloudAPIGateway/
+     networks:
+       - springcloud-movie-net
+     ports:
+       - "9000:9000"
+
+networks:
+    springcloud-movie-net:
+        driver: bridge
+
+

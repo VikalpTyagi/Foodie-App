@@ -1,0 +1,204 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <label class="fs-5" routerLink="/food-items"><Strong class="h3 fw-bold me-5">DELICIOUS</Strong><br>
+            <p style="font-size: small; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Feeling
+                hungry? Order Now!</p>
+        </label>
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search for dishes" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form> -->
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" #move>
+                <li class="nav-item me-4 mt-2">
+                    <button mat-raised-button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        *ngIf="!loggedIn()">Log-In</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <app-login-page></app-login-page>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-raised-button color="primary" *ngIf="loggedIn()" (click)="logOut()"
+                        routerLink="">LogOut</button>
+                </li>
+                <li class="nav-item mt-2">
+                    <button mat-raised-button color="primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                        *ngIf="!loggedIn()">Sign-Up</button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <app-registration-page></app-registration-page>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<div class="bg-success-subtle">
+    <div class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col-12 mt-3 mb-4">
+                <div class="card border-0 bg-success-subtle">
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper">
+                            <img class="" src="{{restaurant.restaurantImg}}" width="200px" height="200px">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fs-1 fw-normal font-monospace">{{restaurant.restaurantName}}</h4>
+                            <p class="card-text fs-6 fw-normal mt-4">{{restaurant.description}}.</p>
+                            <p class="card-text fs-6 fw-normal mt-4">{{restaurant.address}}</p>
+                            <p class="mt-4">{{restaurant.restaurantRating}}
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+
+                            <button mat-raised-button color="primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal4" class="position-absolute top-0 end-0">Add
+                                dishes</button>
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+
+                                            <nav class="navbar shadow" style="background-color: blueviolet;">
+                                                <div class="container">
+                                                    <label class="text-white fs-5"><Strong
+                                                            class="h3 fw-bold">DELICIOUS</Strong><br>for
+                                                        business</label>
+                                                </div>
+                                            </nav>
+                                            <mat-card>
+                                                <mat-card-content>
+                                                    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                                                        <h2>Add dishes</h2>
+                                                        <div class="mb-2">
+                                                            <input type="file" (change)="selectFile($event)"
+                                                                [(ngModel)]="cuisines.foodImg" name="foodImg" required>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <mat-form-field>
+                                                                    <input matInput placeholder="Dish name"
+                                                                        [(ngModel)]="cuisines.foodName" name="foodName"
+                                                                        required>
+                                                                    <mat-error>
+                                                                        Please provide food name
+                                                                    </mat-error>
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <mat-form-field>
+                                                                    <input matInput placeholder="e.g. veg/Non-veg"
+                                                                        [(ngModel)]="cuisines.foodType" name="foodType"
+                                                                        required>
+                                                                    <mat-error>
+                                                                        Please provide a food type
+                                                                    </mat-error>
+                                                                </mat-form-field>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <mat-form-field>
+                                                                    <input matInput placeholder="Description"
+                                                                        [(ngModel)]="cuisines.foodDescription"
+                                                                        name="foodDescription" required>
+                                                                    <mat-error>
+                                                                        Please provide a food description
+                                                                    </mat-error>
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <mat-form-field>
+                                                                    <input matInput placeholder="Price"
+                                                                        [(ngModel)]="cuisines.foodPrice"
+                                                                        name="foodPrice" required>
+                                                                    <mat-error>
+                                                                        Please provide a food price
+                                                                    </mat-error>
+                                                                </mat-form-field>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <mat-form-field>
+                                                                    <input matInput placeholder="Rating"
+                                                                        [(ngModel)]="cuisines.foodRating"
+                                                                        name="foodRating" required>
+                                                                    <mat-error>
+                                                                        Please provide a rating
+                                                                    </mat-error>
+                                                                </mat-form-field>
+                                                            </div>
+                                                        </div>
+                                                        <button mat-raised-button color="primary"
+                                                            [disabled]="!loginForm.form.valid"
+                                                            data-bs-dismiss="modal">Add</button>
+                                                    </form>
+                                                </mat-card-content>
+                                            </mat-card>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card border-0" style="max-width:30rem;" *ngFor="let dish of dishes">
+        <div class="row no-gutters">
+            <div class="col-sm-5">
+                <img class="card-img mt-1 mb-1" src="{{dish.foodImg}}">
+            </div>
+            <div class="col-sm-7">
+                <div class="card-body">
+                    <h1 class="card-title">{{dish.foodName}}</h1>
+                    <p class="card-text">{{dish.foodRating}} <i class="fa-solid fa-star"></i></p>
+                    <p class="card-text">₹ {{dish.foodPrice}}</p>
+                    <p class="card-text">{{dish.foodDescription}}</p>
+                    <button mat-raised-button color="primary"
+                    (click)="OnDelete(dish.foodName)">Delete dishes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

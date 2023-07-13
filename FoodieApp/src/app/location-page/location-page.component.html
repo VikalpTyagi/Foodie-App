@@ -1,0 +1,72 @@
+<div class="container-fluid" style="margin-bottom:5%;">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="mt-5">
+                <img class="icon" src="../../assets/Icon.png" alt="">
+                <h1>
+                    <span>Delicious</span>
+                </h1>
+                <label *ngIf="loggedIn()" class="fs-5 fw-medium mt-4"
+                        routerLink="">Welcome, {{user.userName}}</label>
+                <button class="pt-4 pb-4 ps-4 pe-4" mat-raised-button color="primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" *ngIf="!loggedIn()">Log-In</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <app-login-page></app-login-page>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pt-4 pb-4 ps-4 pe-4 ms-2" mat-raised-button color="primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2"*ngIf="!loggedIn()">Sign-Up</button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <app-registration-page></app-registration-page>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <button class="pt-4 pb-4 ps-4 pe-4 ms-2" mat-raised-button color="primary"
+                    routerLink="/Add-Restaurant">Add-Restaurant</button> -->
+            </div>
+            <div class="searchBlock">
+                <div>
+                    <h2>Cooking Gone wrong?</h2>
+                    <h3>Order food from favourite restaurants near you.</h3>
+                </div>
+                <div class="align-self-center me-3">
+                    <mat-form-field appearance="fill" style="width: 60%;">
+                        <mat-label>City</mat-label>
+                        <mat-select [(ngModel)]="location">
+                            <mat-option *ngFor="let city of restaurant" [value]="city.location">{{city.location}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <button mat-raised-button color="primary" class="pt-4 pb-4 mb-3" routerLink="/food-items" [disabled]="!location" (click)="onSearch()">
+                    Go
+                </button>
+                <div class="mt-3">
+                    <p>Popular cuisines at your fingertips!!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <img class="sideImg ms-0 mb-0" src="../../assets/firstPage1.jpg" alt="">
+            
+        </div>
+    </div>
+</div>

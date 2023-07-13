@@ -1,0 +1,13 @@
+.navbar
+{
+    background-image:url(https://thumbs.dreamstime.com/b/mexican-taco-meat-beans-vegetables-black-stone-table-latin-american-food-long-banner-format-mexican-taco-meat-97685709.jpg);
+    background-size: 100% 100%;
+    
+}
+.bg-custom-1 {
+    background-color: #85144b;
+  }
+  
+  .bg-custom-2 {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  }

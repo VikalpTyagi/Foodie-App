@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand h-50">
+    <label class="text-white position-absolute top-50 start-50 translate-middle fw-bolder"
+        style="font-family:serif; font-size:500%; text-decoration: none;">DELICIOUS</label>
+    <label class="text-white position-absolute top-0 start-50 translate-middle fs-5 d-none d-lg-block"
+        style="margin-top: 15%;">Discover the best food & drinks</label>
+
+    <div class="container">
+        <div class="position-absolute top-0 end-0" style="margin-right: 4%;">
+
+            
+       
+            <button class="ms-lg-5 mt-2" mat-raised-button color="accent" routerLink="/Add-Restaurant"
+                *ngIf="loggedIn()">Add-Restaurant</button>
+
+            <button class="ms-lg-5 mt-2 ms-2" mat-raised-button routerLink="/add-to-cart"  *ngIf="loggedIn()" ><i
+                    class="fa-sharp fa-solid fa-cart-shopping"></i></button>
+
+
+
+            <button class="ms-lg-5 mt-2" mat-raised-button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                *ngIf="!loggedIn()">Log-in</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <app-login-page></app-login-page>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="ms-lg-5 mt-2" mat-raised-button color="primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal2" *ngIf="!loggedIn()">Sign-Up</button>
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <app-registration-page></app-registration-page>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button mat-raised-button color="primary" class="dropdown btn btn-primary ms-lg-5 mt-2 p-4" *ngIf="loggedIn()">
+                <span class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{user.userImg}}" width="40" height="40" class="rounded-circle">  
+                    {{user.userName}}
+                </span>
+
+
+                <ul class="dropdown-menu">
+                    <!-- <li>
+                        <img src="{{user.userImg}}" width="40" height="40" class="rounded-circle"> 
+                    </li> -->
+                    <li><button class="dropdown-item" *ngIf="loggedIn()" (click)="logOut()"
+                            routerLink="">LogOut</button>
+                    </li>
+
+                </ul>
+            </button>
+
+        </div>
+    </div>
+</nav>

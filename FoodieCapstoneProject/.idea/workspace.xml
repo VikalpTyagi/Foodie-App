@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7dcd54ee-94f0-4a0c-9651-5e16d4cf6726" name="Changes" comment="Started">
+      <change afterPath="$PROJECT_DIR$/CartService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/CartServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/config/MessageConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/domain/Cuisines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/service/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/service/ICartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/service/OrderMailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CartService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/controller/myController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/domain/Cuisines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/domain/Favourite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/domain/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/exception/RestaurantAlreadyExist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/exception/RestaurantNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/exception/UserNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/repository/FavouriteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/service/FavouriteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/service/FavouriteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FavouriteService/src/test/java/com/niit/project/FavouriteService/FavouriteServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/src/main/java/com/bej/springcloudapigateway/SpringCloudApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/src/test/java/com/bej/springcloudapigateway/SpringCloudApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/exception/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/UserRegisterServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/proxy/UserProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserRegisterService/src/test/java/com/niit/UserRegisterService/UserRegisterServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/CartService/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CartService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CartService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/CartService/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/CartService/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/com/niit/ApiGateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/FavouriteService/src/main/java/com/niit/project/FavouriteService/FavouriteServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/com/niit/ApiGateway/gateway/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloudAPIGateway/src/main/java/com/bej/springcloudapigateway/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/test/java/com/niit/ApiGateway/ApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/CartService/src/test/java/niit/foodieApp/CartService/CartServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/src/main/java/com/niit/EurekaServer/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/main/java/com/niit/EurekaServer/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/src/test/java/com/niit/EurekaServer/EurekaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/test/java/com/niit/EurekaServer/EurekaServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Domain/Cuisines.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Domain/Cuisines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Domain/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Repository/RestaurantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Repository/RestaurantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/ResturantAuthServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/ResturantAuthServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Security/SecurityTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Security/SecurityTokenGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Security/SecurityTokenGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Security/SecurityTokenGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Service/RestaurantServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Service/RestaurantServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/java/com/niit/ResturantAuthService/Service/RestaurantServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResturantAuthService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ResturantAuthService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthenticationService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Domain/ProfilePhoto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Repository/ImageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/Service/UserServiceInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/UserAuthenticationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/UserAuthenticationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/exception/InvalidCredentialsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/exception/InvalidCredentialsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/exception/UserAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserRegisterService/src/main/java/com/niit/UserRegisterService/exception/UserAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/security/SecurityTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/security/SecurityTokenGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/security/SecurityTokenGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/java/com/niit/UserAuthenticationService/security/JWTSecurityTokenGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthenticationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthenticationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2KD65p8mI4WB3pooGwokcG3Xb68" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Project.color": "7024c5",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "F:/Final Capston Project/Backend/FoodieCapstoneProject",
+    "settings.editor.selected.configurable": "com.haulmont.jpb.viewMode"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\NIIT\Capstone Project\Foodie Backend\FoodieCapstoneProject" />
+      <recent name="I:\NIIT\Capstone Project\Foodie Backend\FoodieCapstoneProject\UserRegisterService\src\main\java\com\niit\UserRegisterService\service" />
+      <recent name="I:\NIIT\Capstone Project\Foodie Backend\FoodieCapstoneProject\UserAuthenticationService\src\main\java\com\niit\UserAuthenticationService" />
+      <recent name="I:\NIIT\Capstone Project\Foodie Backend\FoodieCapstoneProject\UserAuthenticationService\src\main\java\com\niit\UserAuthenticationService\service" />
+      <recent name="I:\NIIT\Capstone Project\Foodie Backend\FoodieCapstoneProject\UserAuthenticationService\src\main\java\com\niit\UserAuthenticationService\security" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.niit.project.FavouriteService.domain" />
+      <recent name="com.niit.UserRegisterService.controller" />
+      <recent name="com.niit.UserRegisterService.exception" />
+      <recent name="com.niit.UserRegisterService.repository" />
+      <recent name="com.niit.UserRegisterService.proxy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CartServiceApplication">
+    <configuration name="CartServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="niit.foodieApp.CartService.CartServiceApplication" />
+      <module name="CartService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="niit.foodieApp.CartService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.EurekaServer.EurekaServerApplication" />
+      <module name="EurekaServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.EurekaServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResturantAuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.ResturantAuthService.ResturantAuthServiceApplication" />
+      <module name="ResturantAuthService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.ResturantAuthService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAuthenticationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.UserAuthenticationService.UserAuthenticationServiceApplication" />
+      <module name="UserAuthenticationService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.UserAuthenticationService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegisterServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.UserRegisterService.UserRegisterServiceApplication" />
+      <module name="UserRegisterService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.UserRegisterService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CartServiceApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.UserRegisterServiceApplication" />
+        <item itemvalue="Application.UserAuthenticationServiceApplication" />
+        <item itemvalue="Application.ResturantAuthServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7dcd54ee-94f0-4a0c-9651-5e16d4cf6726" name="Changes" comment="" />
+      <created>1673496632246</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673496632246</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Started">
+      <created>1673497857709</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673497857709</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Started">
+      <created>1674030328380</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674030328380</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Started">
+      <created>1674197810215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674197810215</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Started">
+      <created>1674208013076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674208013076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Started" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/CartService/src/main/java/niit/foodieApp/CartService/service/CartServiceImpl.java</url>
+          <line>21</line>
+          <properties class="niit.foodieApp.CartService.service.CartServiceImpl" method="addToCart">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

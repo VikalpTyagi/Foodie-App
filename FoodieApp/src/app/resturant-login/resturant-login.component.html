@@ -1,0 +1,32 @@
+<nav class="navbar shadow" style="background-color: blueviolet;">
+    <div class="container">
+        <label class="text-white fs-5" routerLink="/Add-Restaurant"><Strong
+                class="h3 fw-bold">DELICIOUS</Strong><br>for business</label>
+    </div>
+</nav>
+<mat-card>
+    <mat-card-content>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <h2>Log In restaurant</h2>
+            <mat-form-field>
+                <input matInput placeholder="Restaurant ID"
+                    [(ngModel)]="restaurant.restaurantId" name="restaurantId"
+                    required>
+                <mat-error>
+                    Please provide a valid restaurantId
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password"
+                    [(ngModel)]="restaurant.password"
+                    name="password" required>
+                <mat-error>
+                    Please provide a valid password
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary"
+                [disabled]="!loginForm.form.valid" data-bs-dismiss="modal"
+                routerLink="/add-cuisines/{{restaurant.restaurantId}}">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card>

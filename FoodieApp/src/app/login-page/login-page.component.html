@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+      <h2>Log In</h2>
+      <mat-form-field>
+        <input matInput type="email" id="emailid" placeholder="Email address" class="form-control"
+          formControlName="email" required>
+        <mat-error>
+          Please provide a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" id="form2Example2" placeholder="Password" class="form-control"
+          formControlName="password" required>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary" [disabled]="!logForm.valid"
+        data-bs-dismiss="modal">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+
+
+<!-- <form [formGroup]="logForm" (ngSubmit)="onSubmit()" style="padding:5%; background-color:white;">
+  <div style="text-align: center; margin-top:5%;">
+    <h1>
+      Login
+    </h1>
+  </div>-->
+<!-- Email input -->
+<!-- <div class="form-outline mb-4">
+    <input type="email" id="emailid" placeholder="Email address" class="form-control" formControlName="email" />
+ 
+    <div *ngIf="logForm.controls['email'].touched">
+      <div *ngIf="logForm.controls['email'].hasError('required')">
+        <p style="color: rgb(255, 75, 75);">Email is required</p>
+      </div>
+    </div>
+  </div> -->
+<!-- Password input -->
+<!-- <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" placeholder="Password" class="form-control" formControlName="password" />
+    
+    <div *ngIf="logForm.controls['password'].touched">
+      <div *ngIf="logForm.controls['password'].hasError('required')">
+        <p style="color: rgb(255, 75, 75);">Password is required</p>
+      </div>
+    </div>
+  </div> -->
+
+<!-- <div style="text-align: center;">
+    <button mat-flat-button color="primary" type="submit" data-bs-dismiss="modal">Submit</button>
+  </div>
+</form> -->
